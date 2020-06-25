@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="3dp"
+    android:padding="10dp"
+    app:cardElevation="3dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/subtask_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/electrician"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/subtask_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_alignTop="@+id/subtask_image"
+            android:layout_marginRight="19dp"
+            android:layout_toRightOf="@+id/subtask_image"
+            android:text="Sub Task "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+
+        <ImageView
+            android:id="@+id/remove_item_from_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/subtask_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtask_name"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/subtask_image"
+            android:text="Price"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subtask_description"
+            android:layout_below="@id/subtask_price"
+            android:layout_toRightOf="@+id/subtask_image"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"
+            android:text="Description"
+            android:layout_alignBottom="@+id/subtask_image"
+            android:maxLines="4"
+
+            />
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtask_description"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:text="Total Price: 400"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:id="@+id/add_cart_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/subtask_description"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp">
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/decrement"
+                android:textStyle="bold"
+                android:text="—"/>
+
+            <TextView
+                android:id="@+id/display_data"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorPrimary" />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/increment"
+                android:text="+"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

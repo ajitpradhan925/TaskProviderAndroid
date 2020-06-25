@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceListActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_service_list"
+        android:padding="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book a Service"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+        <GridLayout
+            android:id="@+id/filter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:rowCount="1"
+            android:layout_below="@+id/toolbar_service_list"
+            android:columnCount="2">
+            <androidx.cardview.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_columnWeight="0.5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                >
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sort"
+                    android:layout_marginVertical="15dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_sort"
+                    android:textAlignment="center"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_columnWeight="0.5"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filter"
+                    android:layout_marginVertical="15dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_filter"
+                    android:textAlignment="center"
+
+                    />
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/service_list_recycler"
+        android:layout_below="@+id/filter_layout"
+        android:layout_marginTop="20dp"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
